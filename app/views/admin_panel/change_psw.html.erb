@@ -1,0 +1,14 @@
+
+<% form_tag({ :action => 'change_psw_up'}, :method => :post) do  %>
+<%= hidden_field_tag :return_url, params[:return_url]%>
+		<label for="">用户名：</label>
+		<%= @admin.login_name %>
+		<br>
+		<label for="">密&nbsp;&nbsp;码：</label>
+		<%= password_field_tag 'plain_password' %>
+		<br>
+		<label for="">新密码：</label>
+		<%= password_field_tag 'new_password' %>
+		
+	<p><input type="submit" value="修改" /></p>
+<% end %>

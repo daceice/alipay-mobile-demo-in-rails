@@ -1,0 +1,10 @@
+<h1>Session#new</h1>
+<% form_tag({ :action => 'create'}, :method => :post) do  %>
+<%= hidden_field_tag :return_url, params[:return_url]%>
+		<label for="">用户名：</label>
+		<%= text_field_tag 'login_name', params[:login_name] %>
+		<br>
+		<label for="">密&nbsp;&nbsp;码：</label>
+		<%= password_field_tag 'plain_password', params[:password] %>
+	<p><input type="submit" value="登录" /></p>
+<% end %>

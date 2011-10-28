@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  image_url: MyString
+  name: MyString
+  description: MyText
+  unitprice: 1.5
+  amount: 1
+
+two:
+  image_url: MyString
+  name: MyString
+  description: MyText
+  unitprice: 1.5
+  amount: 1

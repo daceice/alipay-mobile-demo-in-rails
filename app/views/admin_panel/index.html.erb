@@ -1,0 +1,11 @@
+
+<h2><%=link_to 'Product', products_url%></h2>
+<h2><%=link_to 'User', users_url%></h2>
+<h2><%=link_to 'Shopping list', shopping_lists_url%></h2>
+
+<% if super_login %>
+<h2><%=link_to 'Admin', admins_url%></h2>
+<% end %>
+	
+<h2><%=link_to 'Change password', admin_panel_change_psw_url%></h2>
+<h2><%=link_to 'Log out', session_destroy_url, :method => 'post'%></h2>

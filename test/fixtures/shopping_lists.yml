@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cellphone: MyString
+  address: MyString
+  name: MyString
+  total_price: 1.5
+
+two:
+  cellphone: MyString
+  address: MyString
+  name: MyString
+  total_price: 1.5

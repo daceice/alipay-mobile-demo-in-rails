@@ -1,0 +1,2 @@
+class AlipayNotifyController < ApplicationController
+end

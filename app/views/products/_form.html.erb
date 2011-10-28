@@ -1,0 +1,42 @@
+
+<% form_for (@product, :html => { :multipart => true }) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    商品名称<br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    商品描述<br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    商品图片<br />
+		<%if !@product.new_record?%>
+	  <%= product_icon_image(@product) %>
+	  <%= product_image(@product) %>
+		<%end%>
+    <%= file_field_tag :image %>
+  </div>
+  <div class="field">
+    单价<br />
+    <%= f.text_field :unitprice %>
+  </div>
+  <div class="field">
+    库存数量<br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
